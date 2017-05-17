@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from '../components/Button'
 import Welcome from '../components/Welcome'
+import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
 
 storiesOf('Welcome', module)
@@ -17,10 +18,15 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   ))
 
+storiesOf('NewsItem', module)
+  .add('not upvoted', () => (
+    <NewsItem upvoted={false} />
+  ))
+
 storiesOf('Upvote', module)
   .add('inactive', () => (
-    <Upvote active={false} />
+    <Upvote onClick={action('clicked')} active={false} />
   ))
   .add('active', () => (
-    <Upvote active={true} />
+    <Upvote onClick={action('clicked')} active={true} />
   ))
