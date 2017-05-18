@@ -2,6 +2,15 @@
 
 A work in progress learning plan for React.
 
+## Getting started
+
+1. [Install NVM](https://github.com/creationix/nvm/blob/master/README.md#install-script)
+2. Install a recent version of Node.js. For example: `nvm install v7.10.0`
+3. Install Yarn: `npm install -g yarn`. Yarn is a replacement for npm, which is the most popular JS package manager.
+4. Install dependencies: `yarn`
+5. Start the storybook: `yarn run storybook`
+6. Visit [http://localhost:6006](http://localhost:6006)
+
 ## Weeks
 
 ### Week 1
