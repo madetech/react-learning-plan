@@ -5,6 +5,7 @@ import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
 import CommentCount from '../components/CommentCount'
+import Rank from '../components/Rank'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -45,3 +46,11 @@ storiesOf('CommentCount', module)
   .add('with 2 count', () => (
     <CommentCount count={2} />
   ))
+
+storiesOf('Rank', module)
+    .add('high', () => (
+        <Rank ranking="1"/>
+    ))
+    .add('low', () => (
+        <Rank ranking="100" />
+    ));
