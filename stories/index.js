@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
+import Points from '../components/Points'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -20,7 +21,7 @@ storiesOf('Button', module)
 
 storiesOf('NewsItem', module)
   .add('not upvoted', () => (
-    <NewsItem upvoted={false} />
+    <NewsItem upvoted={false} count={0} />
   ))
 
 storiesOf('Upvote', module)
@@ -29,4 +30,12 @@ storiesOf('Upvote', module)
   ))
   .add('active', () => (
     <Upvote onClick={action('clicked')} active={true} />
+  ))
+
+storiesOf('Points', module)
+  .add('increased', () => (
+    <Points onClick={action('clicked')} increase={true} />
+  ))
+  .add('decreased', () => (
+    <Points onClick={action('clicked')} increase={false} />
   ))
