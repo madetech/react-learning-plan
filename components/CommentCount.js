@@ -1,9 +1,9 @@
 import React from 'react'
 
-class Comment extends React.Component {
+class CommentCount extends React.Component {
   formatString (count) {
     if (count == undefined) { count = 0 }
-    
+
     if (count == 1) {
       return (count + " comment")
     } else {
@@ -13,9 +13,9 @@ class Comment extends React.Component {
 
   render () {
     return (
-      <comment>{ this.formatString(this.props.count) }</comment> 
+      <div>{ this.formatString(this.props.count) }</div> 
     )
   }
 }
 
-export default Comment
+export default CommentCount

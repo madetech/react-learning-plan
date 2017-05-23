@@ -1,6 +1,6 @@
 import React from 'react'
 import Upvote from './Upvote'
-import Comment from './Comment'
+import CommentCount from './CommentCount'
 
 class NewsItem extends React.Component {
   constructor (props, context) {
@@ -24,7 +24,7 @@ class NewsItem extends React.Component {
           onClick={this.handleClick.bind(this)}
           active={this.state.upvoted}
         />
-        <Comment count={this.state.commentCount} />
+        <CommentCount count={this.state.commentCount} />
       </div>
     )
   }
