@@ -32,7 +32,7 @@ class NewsItem extends React.Component {
         <CommentCount count={this.state.commentCount} />
         <PointsCount count={this.state.pointsCount}
         />
-        <Comment count={this.state.commentCount} />
+        <CommentCount count={this.state.commentCount} />
       </div>
     )
   }
