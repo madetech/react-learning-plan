@@ -1,6 +1,7 @@
 import React from 'react'
 import Upvote from './Upvote'
 import CommentCount from './CommentCount'
+import Points from './Points'
 
 class NewsItem extends React.Component {
   constructor (props, context) {
@@ -13,7 +14,8 @@ class NewsItem extends React.Component {
 
   handleClick () {
     this.setState({
-      upvoted: !this.state.upvoted
+      upvoted: !this.state.upvoted,
+      count: this.state.count + 1
     })
   }
 
@@ -25,6 +27,8 @@ class NewsItem extends React.Component {
           active={this.state.upvoted}
         />
         <CommentCount count={this.state.commentCount} />
+        <Points count={this.state.count}
+        />
       </div>
     )
   }

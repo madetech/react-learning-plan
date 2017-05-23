@@ -6,6 +6,7 @@ import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
 import CommentCount from '../components/CommentCount'
 import Rank from '../components/Rank'
+import Points from '../components/Points'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -22,7 +23,7 @@ storiesOf('Button', module)
 
 storiesOf('NewsItem', module)
   .add('not upvoted', () => (
-    <NewsItem upvoted={false} />
+    <NewsItem upvoted={false} count={0} />
   ))
   .add('with 12 comments', () => (
     <NewsItem commentCount={12} />
@@ -54,3 +55,11 @@ storiesOf('Rank', module)
     .add('low', () => (
         <Rank ranking="100" />
     ));
+
+storiesOf('Points', module)
+  .add('increased', () => (
+    <Points onClick={action('clicked')} increase={true} />
+  ))
+  .add('decreased', () => (
+    <Points onClick={action('clicked')} increase={false} />
+  ))
