@@ -1,22 +1,30 @@
 import React from 'react'
 import Upvote from './Upvote'
+<<<<<<< HEAD
 import CommentCount from './CommentCount'
 import Points from './Points'
+=======
+import PointsCount from './PointsCount'
+>>>>>>> Rename to PointsCount, remove  and only increase on upvote
 
 class NewsItem extends React.Component {
   constructor (props, context) {
     super(props, context)
     this.state = {
       upvoted: this.props.upvoted,
-      commentCount: this.props.commentCount
+      commentCount: this.props.commentCount,
+      pointsCount: this.props.pointsCount
     }
   }
 
   handleClick () {
     this.setState({
       upvoted: !this.state.upvoted,
-      count: this.state.count + 1
+      pointsCount: this.state.pointsCount + 1
     })
+    if (this.state.upvoted !== true) {
+      this.setState({ pointsCount: this.state.pointsCount + 1 })
+    }
   }
 
   render () {
@@ -27,7 +35,7 @@ class NewsItem extends React.Component {
           active={this.state.upvoted}
         />
         <CommentCount count={this.state.commentCount} />
-        <Points count={this.state.count}
+        <PointsCount count={this.state.pointsCount}
         />
       </div>
     )
@@ -36,7 +44,8 @@ class NewsItem extends React.Component {
 
 NewsItem.propTypes = {
   upvoted: React.PropTypes.bool.isRequired,
-  commentCount: React.PropTypes.number.isRequired
+  commentCount: React.PropTypes.number.isRequired,
+  pointsCount: React.PropTypes.number.isRequired
 }
 
 export default NewsItem
