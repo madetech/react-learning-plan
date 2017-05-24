@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
+import CommentCount from '../components/CommentCount'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -22,6 +23,9 @@ storiesOf('NewsItem', module)
   .add('not upvoted', () => (
     <NewsItem upvoted={false} />
   ))
+  .add('with 12 comments', () => (
+    <NewsItem commentCount={12} />
+  ))
 
 storiesOf('Upvote', module)
   .add('inactive', () => (
@@ -29,4 +33,15 @@ storiesOf('Upvote', module)
   ))
   .add('active', () => (
     <Upvote onClick={action('clicked')} active={true} />
+  ))
+
+storiesOf('CommentCount', module)
+  .add('with 0 count', () => (
+    <CommentCount count={0} />
+  ))
+  .add('with 1 count', () => (
+    <CommentCount count={1} />
+  ))
+  .add('with 2 count', () => (
+    <CommentCount count={2} />
   ))
