@@ -29,12 +29,20 @@ A work in progress learning plan for React.
 
 #### Goals
 
-- [ ] Know how to TDD React components
+- [ ] Know how to TDD React components using Jest
+- [ ] Know how to TDD React components using Enzyme
+- [ ] Know how to TDD React components using Sinon
+- [ ] Know how to TDD React components using snapshots
+
+### Week 3
+
+#### Goals
+
 - [ ] Know how to use context
 - [ ] Understand the concept of a higher order component
 - [ ] Know how to use lifecycle functions to build complex components
 
-### Week 3
+### Week 4
 
 #### Goals
 
@@ -42,7 +50,7 @@ A work in progress learning plan for React.
 - [ ] Understand the difference between "smart" components and "dumb" components.
 - [ ] Understand how to compose smart + dumb components to separate presentation code, business logic and state operations.
 
-### Week 4
+### Week 5
 
 #### Goals
 
