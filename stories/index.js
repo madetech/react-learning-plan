@@ -33,9 +33,9 @@ storiesOf('Upvote', module)
   ))
 
 storiesOf('Rank', module)
-    .add('high', () => (
-        <Rank ranking="1"/>
-    ))
-    .add('low', () => (
-        <Rank ranking="100" />
-    ));
+  .add('high', () => (
+    <Rank ranking="1"/>
+  ))
+  .add('low', () => (
+    <Rank ranking="100"/>
+  ));
