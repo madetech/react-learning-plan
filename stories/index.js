@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
 import Upvote from '../components/Upvote'
+import Rank from '../components/Rank'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -30,3 +31,11 @@ storiesOf('Upvote', module)
   .add('active', () => (
     <Upvote onClick={action('clicked')} active={true} />
   ))
+
+storiesOf('Rank', module)
+  .add('high', () => (
+    <Rank ranking="1"/>
+  ))
+  .add('low', () => (
+    <Rank ranking="100"/>
+  ));
