@@ -17,13 +17,13 @@ A work in progress learning plan for React.
 
 #### Goals
 
-- [ ] Know how to create a React component
-- [ ] Know how to render a React component with props
-- [ ] Understand what prop types are and how to use them
-- [ ] Know how to change the behaviour of a component based on a prop
+- [x] Know how to create a React component
+- [x] Know how to render a React component with props
+- [x] Understand what prop types are and how to use them
+- [x] Know how to change the behaviour of a component based on a prop
 - [ ] Know about `this.props.children`
-- [ ] Know how to set initial state of a component
-- [ ] Know how to change state of a component based on events
+- [x] Know how to set initial state of a component
+- [x] Know how to change state of a component based on events
 
 ### Week 2
 
