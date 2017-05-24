@@ -1,19 +1,24 @@
 import React from 'react'
 import Upvote from './Upvote'
-import Points from './Points'
+import PointsCount from './PointsCount'
 
 class NewsItem extends React.Component {
   constructor (props, context) {
     super(props, context)
-    this.state = {upvoted: this.props.upvoted}
-    this.state = {count: this.props.count}
+    this.state = {
+      upvoted: this.props.upvoted,
+      pointsCount: this.props.pointsCount
+    }
   }
 
   handleClick () {
     this.setState({
       upvoted: !this.state.upvoted,
-      count: this.state.count + 1
+      pointsCount: this.state.pointsCount + 1
     })
+    if (this.state.upvoted !== true) {
+      this.setState({ pointsCount: this.state.pointsCount + 1 })
+    }
   }
 
   render () {
@@ -23,7 +28,7 @@ class NewsItem extends React.Component {
           onClick={this.handleClick.bind(this)}
           active={this.state.upvoted}
         />
-        <Points count={this.state.count}
+        <PointsCount count={this.state.pointsCount}
         />
       </div>
     )
@@ -31,7 +36,8 @@ class NewsItem extends React.Component {
 }
 
 NewsItem.propTypes = {
-  upvoted: React.PropTypes.bool.isRequired
+  upvoted: React.PropTypes.bool.isRequired,
+  pointsCount: React.PropTypes.number.isRequired
 }
 
 export default NewsItem
