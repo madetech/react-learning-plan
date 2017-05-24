@@ -19,8 +19,7 @@ class NewsItem extends React.Component {
 
   handleClick () {
     this.setState({
-      upvoted: !this.state.upvoted,
-      pointsCount: this.state.pointsCount + 1
+      upvoted: !this.state.upvoted
     })
     if (this.state.upvoted !== true) {
       this.setState({ pointsCount: this.state.pointsCount + 1 })
