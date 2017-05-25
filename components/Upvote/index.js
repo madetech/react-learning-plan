@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 class Upvote extends React.Component {
   render () {
@@ -17,8 +18,8 @@ class Upvote extends React.Component {
 }
 
 Upvote.propTypes = {
-  active: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func
+  active: PropTypes.bool.isRequired,
+  onClick: PropTypes.func
 }
 
 Upvote.defaultProps = {

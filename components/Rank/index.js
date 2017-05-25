@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 class Rank extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class Rank extends React.Component {
 }
 
 Rank.propTypes = {
-  ranking: React.PropTypes.number.isRequired,
+  ranking: PropTypes.number.isRequired,
 }
 
 export default Rank
