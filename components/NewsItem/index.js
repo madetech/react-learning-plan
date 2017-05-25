@@ -1,7 +1,16 @@
 import React from 'react'
+<<<<<<< HEAD:components/NewsItem.js
 import Upvote from './Upvote'
+<<<<<<< HEAD
 import CommentCount from './CommentCount'
+import Points from './Points'
+=======
 import PointsCount from './PointsCount'
+>>>>>>> Rename to PointsCount, remove  and only increase on upvote
+=======
+import Upvote from '../Upvote'
+import PointsCount from '../PointsCount'
+>>>>>>> Move components into directories:components/NewsItem/index.js
 
 class NewsItem extends React.Component {
   constructor (props, context) {
