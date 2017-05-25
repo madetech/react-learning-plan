@@ -3,8 +3,10 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from '../components/Button'
 import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
+import NewsItemList from '../components/NewsItemList'
 import Upvote from '../components/Upvote'
 import PointsCount from '../components/PointsCount'
+import Rank from '../components/Rank'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -22,6 +24,19 @@ storiesOf('Button', module)
 storiesOf('NewsItem', module)
   .add('not upvoted', () => (
     <NewsItem upvoted={false} pointsCount={0} />
+  ))
+
+storiesOf('NewsItemList', module)
+  .add('when there are no items', () => (
+    <NewsItemList items={[]} />
+  ))
+  .add('when there are two items', () => (
+    <NewsItemList
+      items={[
+        { title: 'Malicious Subtitles Threaten Kodi, VLC and Popcorn Time Users' },
+        { title: 'Google and IBM announce Istio – a microservices mesh for Kubernetes' }
+      ]}
+    />
   ))
 
 storiesOf('Upvote', module)
@@ -42,3 +57,11 @@ storiesOf('PointsCount', module)
   .add('5 points', () => (
     <PointsCount pointsCount={5} />
   ))
+
+storiesOf('Rank', module)
+  .add('high', () => (
+    <Rank ranking="1"/>
+  ))
+  .add('low', () => (
+    <Rank ranking="100"/>
+  ));
