@@ -1,6 +1,6 @@
 import React from 'react'
-import Upvote from './Upvote'
-import PointsCount from './PointsCount'
+import Upvote from '../Upvote'
+import PointsCount from '../PointsCount'
 
 class NewsItem extends React.Component {
   constructor (props, context) {
