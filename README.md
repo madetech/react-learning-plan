@@ -25,12 +25,30 @@ A work in progress learning plan for React.
 - [x] Know how to set initial state of a component
 - [x] Know how to change state of a component based on events
 
+#### Session
+
+- Introduce the Storybook, and show examples of basic React components.
+- As a group, clone simple UI elements used by Hacker News as React components.
+
+#### Homework
+
+- Create a React component which can be put into the `NewsItem` component.
+
 ### Week 2
 
 #### Goals
 
 - [ ] Know how to TDD React components using Jest
 - [ ] Know how to TDD React components using `mount` from Enzyme
+
+#### Session
+
+- Introduce Jest and Enzyme, and the test suite.
+- As a group, TDD the creation of some React components.
+
+#### Homework
+
+- Recreate the component from last week's homework using TDD.
 
 ### Week 3
 
@@ -40,6 +58,19 @@ A work in progress learning plan for React.
 - [ ] Know how to TDD React components using Sinon
 - [ ] Know how to TDD React components using snapshots
 
+#### Session
+
+- Create a component with at least one test for each of `shallow`, `mount` and `render` from Enzyme.
+- Use `shallow` to test the composition of one component.
+- Use `mount` to test the behaviour of one component.
+- Use `render` to test the content of one component.
+- Use Sinon to test a component with a callback prop.
+- Introduce `storyshots` and explain snapshot testing.
+
+#### Homework
+
+- ???
+
 ### Week 4
 
 #### Goals
@@ -47,6 +78,14 @@ A work in progress learning plan for React.
 - [ ] Know how to use context
 - [ ] Understand the concept of a higher order component
 - [ ] Know how to use lifecycle functions to build complex components
+
+#### Session
+
+???
+
+#### Homework
+
+???
 
 ### Week 5
 
@@ -56,6 +95,14 @@ A work in progress learning plan for React.
 - [ ] Understand the difference between "smart" components and "dumb" components.
 - [ ] Understand how to compose smart + dumb components to separate presentation code, business logic and state operations.
 
+#### Session
+
+???
+
+#### Homework
+
+???
+
 ### Week 6
 
 #### Goals
@@ -63,6 +110,14 @@ A work in progress learning plan for React.
 - [ ] Know one method of creating a new universal React app.
 - [ ] Know one method of adding pages and navigation.
 - [ ] Know how to use APIs to build a small web app.
+
+#### Session
+
+???
+
+#### Homework
+
+???
 
 ## Stretch Goals
 
