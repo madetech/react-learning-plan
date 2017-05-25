@@ -1,6 +1,7 @@
 import React from 'react'
 import Upvote from '../Upvote'
 import PointsCount from '../PointsCount'
+import PropTypes from 'prop-types';
 
 class NewsItem extends React.Component {
   constructor (props, context) {
@@ -35,8 +36,8 @@ class NewsItem extends React.Component {
 }
 
 NewsItem.propTypes = {
-  upvoted: React.PropTypes.bool.isRequired,
-  pointsCount: React.PropTypes.number.isRequired
+  upvoted: PropTypes.bool.isRequired,
+  pointsCount: PropTypes.number.isRequired
 }
 
 export default NewsItem

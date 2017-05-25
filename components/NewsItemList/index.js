@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import NewsItem from '../NewsItem'
 
 class NewsItemList extends React.Component {
@@ -11,17 +12,17 @@ class NewsItemList extends React.Component {
       )
     }
 
-    const children = this.props.items.map(item => <NewsItem title={item.title}/> )
+    const children = this.props.items.map((item, index) => <NewsItem title={item.title} upvoted pointsCount={1} key={`NewsItem-${index}`}/> )
 
     return <div>{children}</div>
   }
 }
 
 NewsItemList.propTypes = {
-  items: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      title: React.PropTypes.string,
-      pointsCount: React.PropTypes.number
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      pointsCount: PropTypes.number
     })
   )
 }
