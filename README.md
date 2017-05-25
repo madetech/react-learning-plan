@@ -10,6 +10,7 @@ A work in progress learning plan for React.
 4. Install dependencies: `yarn`
 5. Start the storybook: `yarn run storybook`
 6. Visit [http://localhost:6006](http://localhost:6006)
+7. Run ` yarn test -- --watch ` to run the tests for TDD.
 
 ## Weeks
 
