@@ -3,6 +3,7 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from '../components/Button'
 import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
+import NewsItemList from '../components/NewsItemList'
 import Upvote from '../components/Upvote'
 import Rank from '../components/Rank'
 
@@ -22,6 +23,19 @@ storiesOf('Button', module)
 storiesOf('NewsItem', module)
   .add('not upvoted', () => (
     <NewsItem upvoted={false} />
+  ))
+
+storiesOf('NewsItemList', module)
+  .add('when there are no items', () => (
+    <NewsItemList items={[]} />
+  ))
+  .add('when there are two items', () => (
+    <NewsItemList
+      items={[
+        { title: 'Malicious Subtitles Threaten Kodi, VLC and Popcorn Time Users' },
+        { title: 'Google and IBM announce Istio – a microservices mesh for Kubernetes' }
+      ]}
+    />
   ))
 
 storiesOf('Upvote', module)
