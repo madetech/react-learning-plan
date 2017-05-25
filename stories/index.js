@@ -5,6 +5,7 @@ import Welcome from '../components/Welcome'
 import NewsItem from '../components/NewsItem'
 import NewsItemList from '../components/NewsItemList'
 import Upvote from '../components/Upvote'
+import PointsCount from '../components/PointsCount'
 import Rank from '../components/Rank'
 
 storiesOf('Welcome', module)
@@ -22,7 +23,7 @@ storiesOf('Button', module)
 
 storiesOf('NewsItem', module)
   .add('not upvoted', () => (
-    <NewsItem upvoted={false} />
+    <NewsItem upvoted={false} pointsCount={0} />
   ))
 
 storiesOf('NewsItemList', module)
@@ -44,6 +45,17 @@ storiesOf('Upvote', module)
   ))
   .add('active', () => (
     <Upvote onClick={action('clicked')} active={true} />
+  ))
+
+storiesOf('PointsCount', module)
+  .add('0 points', () => (
+    <PointsCount pointsCount={0} />
+  ))
+  .add('1 point', () => (
+    <PointsCount pointsCount={1} />
+  ))
+  .add('5 points', () => (
+    <PointsCount pointsCount={5} />
   ))
 
 storiesOf('Rank', module)
