@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Upvote from '../Upvote'
 import PointsCount from '../PointsCount'
-import PropTypes from 'prop-types';
 
 class NewsItem extends React.Component {
   constructor (props, context) {
