@@ -1,7 +1,7 @@
 import React from 'react'
 
 class PointsCount extends React.Component {
-  formatString (count) {
+  formatPointsString (count) {
     if (count === 1) {
       return `${count} point`
     } else {
@@ -10,7 +10,7 @@ class PointsCount extends React.Component {
   }
   render () {
     return (
-      <div>{this.formatString(this.props.count)}</div>
+      <div>{this.formatPointsString(this.props.pointsCount)}</div>
     )
   }
 }
