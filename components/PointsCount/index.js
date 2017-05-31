@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class PointsCount extends React.Component {
   formatPointsString (count) {
@@ -13,6 +14,10 @@ class PointsCount extends React.Component {
       <div>{this.formatPointsString(this.props.pointsCount)}</div>
     )
   }
+}
+
+PointsCount.propTypes = {
+  pointsCount: PropTypes.number.isRequired
 }
 
 export default PointsCount
