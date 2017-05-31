@@ -57,7 +57,6 @@ A work in progress learning plan for React.
 
 - [ ] Know how to TDD React components using `shallow` and `render` from Enzyme
 - [ ] Know how to TDD React components using Sinon
-- [ ] Know how to TDD React components using snapshots
 
 #### Session
 
@@ -66,7 +65,6 @@ A work in progress learning plan for React.
 - Use `mount` to test the behaviour of one component.
 - Use `render` to test the content of one component.
 - Use Sinon to test a component with a callback prop.
-- Introduce `storyshots` and explain snapshot testing.
 
 #### Homework
 
@@ -126,3 +124,4 @@ A work in progress learning plan for React.
 - [ ] Introduce Redux sagas (???)
 - [ ] Webpack
 - [ ] Next.js
+- [ ] Know how to TDD React components using snapshots
