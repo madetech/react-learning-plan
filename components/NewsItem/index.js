@@ -28,7 +28,7 @@ class NewsItem extends React.Component {
           onClick={this.handleClick.bind(this)}
           active={this.state.upvoted}
         />
-        <PointsCount count={this.state.pointsCount}
+        <PointsCount pointsCount={this.state.pointsCount}
         />
       </div>
     )
