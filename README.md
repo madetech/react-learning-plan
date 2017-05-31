@@ -39,8 +39,8 @@ A work in progress learning plan for React.
 
 #### Goals
 
-- [ ] Know how to TDD React components using Jest
-- [ ] Know how to TDD React components using `mount` from Enzyme
+- [x] Know how to TDD React components using Jest
+- [x] Know how to TDD React components using `mount` from Enzyme
 
 #### Session
 
