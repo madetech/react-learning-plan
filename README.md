@@ -68,7 +68,7 @@ A work in progress learning plan for React.
 
 #### Homework
 
-- ???
+- Create a component which is tested using Sinon and Enzyme.
 
 ### Week 4
 
