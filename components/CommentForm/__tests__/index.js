@@ -12,10 +12,9 @@ describe('CommentForm', () => {
   it('allows you to add content into the text area', () => {
     const onFormSubmit = sinon.spy()
     const component = mount(<CommentForm onSubmit={onFormSubmit} />)
-    component.find('button').simulate('click')
 
-    setTimeout(() => {
-      expect(onFormSubmit.called).toBe(true)
-    }, 1)
+    component.find('form').simulate('submit')
+
+    expect(onFormSubmit.called).toBe(true)
   })
 })
