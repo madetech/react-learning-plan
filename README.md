@@ -76,11 +76,10 @@ A work in progress learning plan for React.
 
 - [ ] Know how to use context
 - [ ] Understand the concept of a higher order component
-- [ ] Know how to use lifecycle functions to build complex components
 
 #### Session
 
-???
+- Create a Theme component which makes theme variables available in context.
 
 #### Homework
 
@@ -90,6 +89,7 @@ A work in progress learning plan for React.
 
 #### Goals
 
+- [ ] Know how to use lifecycle functions to build complex components
 - [ ] Know how to fetch data for a component using lifecycle functions.
 - [ ] Understand the difference between "smart" components and "dumb" components.
 - [ ] Understand how to compose smart + dumb components to separate presentation code, business logic and state operations.
