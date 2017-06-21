@@ -12,7 +12,7 @@ class NewsItemList extends React.Component {
       )
     }
 
-    const children = this.props.items.map((item, index) => <NewsItem title={item.title} upvoted pointsCount={1} key={`NewsItem-${index}`}/> )
+    const children = this.props.items.map((item, index) => <NewsItem title={item.title} host={item.host} username={item.username} upvoted pointsCount={1} key={`NewsItem-${index}`}/> )
 
     return <div>{children}</div>
   }
@@ -22,7 +22,9 @@ NewsItemList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      pointsCount: PropTypes.number
+      pointsCount: PropTypes.number,
+      username: PropTypes.string,
+      host: PropTypes.string,
     })
   )
 }

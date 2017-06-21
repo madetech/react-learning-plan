@@ -9,10 +9,10 @@ class Upvote extends React.Component {
     }
 
     return (
-      <div
+      <span
         onClick={this.props.onClick}
         style={upvoteStyles}
-      >{'↑'}</div>
+      >{'↑'}</span>
     )
   }
 }

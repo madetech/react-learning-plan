@@ -11,7 +11,7 @@ class PointsCount extends React.Component {
   }
   render () {
     return (
-      <div>{this.formatPointsString(this.props.pointsCount)}</div>
+      <span>{this.formatPointsString(this.props.pointsCount)}</span>
     )
   }
 }
