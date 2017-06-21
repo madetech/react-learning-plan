@@ -12,6 +12,9 @@
   "author": "Richard Foster <richard@rpf.me> (http://rpf.me)",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "faker": "^4.1.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
