@@ -24,12 +24,13 @@ class NewsItem extends React.Component {
   render () {
     return (
       <div>
-        <Upvote
-          onClick={this.handleClick.bind(this)}
-          active={this.state.upvoted}
-        />
-        <PointsCount pointsCount={this.state.pointsCount}
-        />
+        <div>
+          <Upvote onClick={this.handleClick.bind(this)} active={this.state.upvoted} />
+          {this.props.title} ({this.props.host})
+        </div>
+        <div>
+          <PointsCount pointsCount={this.state.pointsCount} /> by {this.props.username}
+        </div>
       </div>
     )
   }
@@ -37,7 +38,10 @@ class NewsItem extends React.Component {
 
 NewsItem.propTypes = {
   upvoted: PropTypes.bool.isRequired,
-  pointsCount: PropTypes.number.isRequired
+  pointsCount: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  host: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired
 }
 
 export default NewsItem
