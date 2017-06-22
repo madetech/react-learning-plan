@@ -74,7 +74,7 @@ A work in progress learning plan for React.
 
 #### Goals
 
-- [ ] Know how to use context
+- [x] Know how to use context
 - [ ] Understand the concept of a higher order component
 
 #### Session
@@ -96,11 +96,11 @@ A work in progress learning plan for React.
 
 #### Session
 
-???
+- Create an index page for our Hacker News app which displays posts fetched from an API.
 
 #### Homework
 
-???
+- Create a React component which makes an AJAX call and uses the data returned to render a "dumb" component.
 
 ### Week 6
 
