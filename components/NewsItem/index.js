@@ -26,8 +26,7 @@ class NewsItem extends React.Component {
       <div>
         <div>
           <Upvote onClick={this.handleClick.bind(this)} active={this.state.upvoted} />
-          {this.props.title}
-          ({this.props.host})
+          {this.props.title} ({this.props.host})
         </div>
         <div>
           <PointsCount pointsCount={this.state.pointsCount} /> by {this.props.username}
