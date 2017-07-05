@@ -1,0 +1,58 @@
+<%
+  @breadcrumb_items = [
+    { title: t(:home), path: root_path },
+    { title: t(:signup_title, scope: [:case_study, @resource_name]), path: request.url }
+  ]
+%>
+
+<% content_for :title do %><%= t(:title, scope: [:case_study, @resource_name]) %><% end %>
+<% content_for :breadcrumbs do %> <%= breadcrumbs(@breadcrumb_items, style: :shifted) %><% end %>
+<% content_for :breadcrumbs_mobile do %><%= breadcrumbs_mobile(@breadcrumb_items) %><% end %>
+
+<% content_for :above_breadcrumbs do %>
+  <%= render partial: 'blocks/header', locals: {
+    title: t(:header, scope: [:case_study, @resource_name]),
+    body: t(:sub_header, scope: [:case_study, @resource_name]),
+    background: image_path(t(:background_image, scope: [:case_study, @resource_name])),
+    cover_image: image_path(t(:cover_image, scope: [:case_study, @resource_name])),
+    cover_inset_html: "<div class='caseStudy-coverImageLogo'><img src='#{image_path(t(:logo_image, scope: [:case_study, @resource_name]))}' /></div>",
+    before_title_html: "<div class='caseStudy-mobileLogo'><img src='#{image_path(t(:logo_image, scope: [:case_study, @resource_name]))}' /></div>"
+  } %>
+<% end %>
+
+<div class="services" id="case-study-signup">
+  <div class="services__row">
+    <div class="content__col--2 content__col-padding--right">
+      <div class="content__col-inner">
+        <%= t(:body, scope: [:case_study, @resource_name]).html_safe %>
+
+        <% if t(:testimonials, scope: [:case_study, @resource_name]).is_a?(Hash) %>
+          <%= render partial: 'shared/barebones/testimonials', locals: {
+            testimonials: t(:testimonials, scope: [:case_study, @resource_name])
+          } %>
+        <% end %>
+      </div>
+    </div>
+    <div class="content__col--1">
+      <div class="content__col-inner">
+        <section class="resourceBlock-form" style="width: 100%;">
+          <div class="resourceBlock-header">
+            <h3><%= t(:signup_form_header, scope: [:case_study, @resource_name]) %></h3>
+            <%= t(:signup_form_body, scope: [:case_study, @resource_name]).html_safe %>
+          </div>
+          <%= render partial: 'blocks/enquiry_form', locals: {
+            post_url: case_study_signup_path,
+            asset: t(:asset, scope: [:case_study, @resource_name]),
+            cta_label: t(:cta, scope: [:case_study, @resource_name])
+          } %>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'blocks/contact_form', locals: {
+  contact: 'rory',
+  category: 'support_maintenance',
+  redirect_url: root_path
+} %>

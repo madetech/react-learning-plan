@@ -9,6 +9,6 @@ storiesOf('NewsItem', module)
       pointsCount={0}
       title="My example post"
       username="richard"
-      host="madetech.com"
+      url="madetech.com"
     />
   ))
